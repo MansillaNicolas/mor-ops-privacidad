@@ -4,4 +4,4 @@ Política de privacidad pública de la app **MoR Ops** (`com.mor.morops`), publi
 
 https://mansillanicolas.github.io/mor-ops-privacidad/
 
-Para consultas sobre privacidad, abrí un issue en este repositorio.
+Para consultas sobre privacidad, abre un issue en este repositorio.
