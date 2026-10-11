@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoR Ops · Política de privacidad</title>
+<meta name="description" content="Política de privacidad de la app MoR Ops para Android.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1d2433;
+    --muted: #5b6577;
+    --accent: #0f9488;
+    --line: #e3e7ee;
+    --card: #f5f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #070a12;
+      --text: #e8edf5;
+      --muted: #9aa5b8;
+      --accent: #2dd4bf;
+      --line: #1f2738;
+      --card: #0e1420;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 36px 0 8px; color: var(--accent); }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); }
+  .summary {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin: 24px 0;
+  }
+  .summary ul { margin: 0; padding-left: 20px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+  th { font-size: .9rem; color: var(--muted); font-weight: 600; }
+  a { color: var(--accent); }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de privacidad de MoR Ops</h1>
+  <p class="muted">Última actualización: 11 de octubre de 2026</p>
+
+  <p>MoR Ops es una app de preparación y gestión de emergencias para Android
+  (identificador <code>com.mor.morops</code>). Esta política explica qué datos
+  usa la app, dónde se guardan y qué control tenés sobre ellos.</p>
+
+  <div class="summary">
+    <strong>En resumen</strong>
+    <ul>
+      <li>No hay cuentas, registro ni servidores propios: todo lo que cargás se guarda solo en tu teléfono.</li>
+      <li>No usamos analíticas, publicidad ni SDK de terceros que rastreen tu actividad.</li>
+      <li>No vendemos ni compartimos tus datos con nadie.</li>
+      <li>La única conexión a internet es para descargar los mapas de OpenStreetMap.</li>
+    </ul>
+  </div>
+
+  <h2>1. Datos que guarda la app</h2>
+  <p>La información que ingresás se almacena en una base de datos local dentro
+  del almacenamiento privado de la app, en tu dispositivo. Puede incluir:</p>
+  <ul>
+    <li>Integrantes de tu grupo: nombre, rol, grupo sanguíneo, alergias,
+    habilidades, estado de salud, notas, último lugar visto y dosis de
+    medicamentos registradas.</li>
+    <li>Inventario de suministros, tareas, crisis registradas, evaluaciones de
+    amenaza y notas.</li>
+    <li>Contactos de emergencia que agregás manualmente.</li>
+    <li>Puntos guardados en el mapa (waypoints) y su ubicación.</li>
+  </ul>
+  <p>Estos datos nunca salen del teléfono salvo que vos decidas compartirlos
+  (ver secciones 4 y 5). La app no tiene acceso a tu agenda de contactos, fotos
+  ni archivos, salvo el archivo puntual que elijas al restaurar una copia de
+  seguridad o importar un mapa sin conexión.</p>
+
+  <h2>2. Ubicación</h2>
+  <p>Con tu permiso, la app usa la ubicación del dispositivo <strong>solo
+  mientras está abierta</strong>, para:</p>
+  <ul>
+    <li>mostrar tu posición en el mapa;</li>
+    <li>incluir tus coordenadas en un mensaje SOS o en un reporte de ayuda
+    cuando vos lo enviás;</li>
+    <li>guardar un punto en el mapa con tu ubicación actual.</li>
+  </ul>
+  <p>La app no accede a la ubicación en segundo plano, no guarda un historial
+  de recorridos y no envía tu ubicación a ningún servidor. Podés negar o
+  revocar el permiso en cualquier momento desde los ajustes de Android; el
+  resto de la app sigue funcionando.</p>
+
+  <h2>3. Mapas (OpenStreetMap)</h2>
+  <p>Para mostrar el mapa, la app descarga imágenes (teselas) desde los
+  servidores de la Fundación OpenStreetMap (<code>tile.openstreetmap.org</code>).
+  Como en cualquier conexión web, ese servicio recibe tu dirección IP, la zona
+  del mapa solicitada y un identificador de la app. La app no envía ningún
+  otro dato. Las teselas se guardan en caché en el teléfono para poder usarlas
+  sin conexión. El tratamiento de esos datos por parte de OpenStreetMap se rige
+  por su <a href="https://osmfoundation.org/wiki/Privacy_Policy">política de privacidad</a>.</p>
+
+  <h2>4. Mensajes SOS, llamadas y reportes</h2>
+  <p>Cuando enviás un SOS, llamás a un número de emergencia o compartís un
+  reporte de ayuda, la app abre la aplicación de mensajes, teléfono o el menú
+  de compartir de tu sistema con el texto ya armado. Vos elegís el destinatario
+  y confirmás el envío; MoR Ops no envía mensajes por su cuenta ni recibe copia
+  de ellos.</p>
+
+  <h2>5. Copias de seguridad</h2>
+  <p>Solo cuando lo pedís, la app genera un archivo de copia de seguridad con
+  tus datos y abre el menú de compartir para que decidas dónde guardarlo
+  (por ejemplo, Drive o una carpeta local). Podés protegerlo con una
+  contraseña: en ese caso se cifra con AES-256-GCM y sin esa contraseña no se
+  puede leer. Las copias de seguridad automáticas de Android están
+  desactivadas para esta app, de modo que tus datos no se suben a la nube sin
+  que lo decidas.</p>
+
+  <h2>6. Seguridad</h2>
+  <ul>
+    <li>El acceso a la app se protege con un PIN; se guarda solo un hash
+    derivado (PBKDF2) en el almacenamiento seguro del sistema, nunca el PIN en
+    texto plano.</li>
+    <li>La app se bloquea automáticamente tras unos minutos en segundo plano y
+    bloquea temporalmente el acceso después de varios intentos de PIN
+    fallidos.</li>
+  </ul>
+
+  <h2>7. Permisos de Android</h2>
+  <table>
+    <tr><th>Permiso</th><th>Para qué se usa</th></tr>
+    <tr><td>Ubicación (precisa y aproximada)</td><td>Mapa, SOS y puntos guardados, solo con la app abierta.</td></tr>
+    <tr><td>Internet</td><td>Descargar las teselas del mapa de OpenStreetMap.</td></tr>
+    <tr><td>Vibración</td><td>Señales táctiles y avisos de la app.</td></tr>
+  </table>
+  <p>La linterna y las señales de luz usan el flash a través del sistema, sin
+  permiso de cámara: la app no toma fotos ni graba video.</p>
+
+  <h2>8. Cómo borrar tus datos</h2>
+  <p>Como no hay cuenta ni servidor, no guardamos ninguna copia de tus datos.
+  Podés eliminarlos por completo de dos formas:</p>
+  <ul>
+    <li>desde la app, en <em>Más → Ajustes → Borrar todos los datos</em>;</li>
+    <li>desinstalando la app.</li>
+  </ul>
+  <p>Las copias de seguridad que hayas exportado quedan donde las guardaste y
+  debés borrarlas vos.</p>
+
+  <h2>9. Menores de edad</h2>
+  <p>La app está pensada para personas adultas que organizan la preparación de
+  su hogar o grupo. No está dirigida a menores de 13 años ni recopila datos de
+  forma intencional sobre ellos; los datos de integrantes menores que cargue un
+  adulto quedan solo en su dispositivo.</p>
+
+  <h2>10. Aviso importante</h2>
+  <p>La información de la app es orientativa y no reemplaza la atención médica
+  profesional ni las indicaciones de los servicios de emergencia o de las
+  autoridades. Ante una emergencia, llamá al número de emergencias local.</p>
+
+  <h2>11. Cambios en esta política</h2>
+  <p>Si la política cambia, se publicará en esta misma dirección con la fecha
+  de actualización. Si un cambio implica usar datos de una forma nueva, la app
+  te lo informará antes.</p>
+
+  <h2>12. Contacto</h2>
+  <p>Para consultas sobre privacidad podés abrir una consulta en
+  <a href="https://github.com/MansillaNicolas/mor-ops-privacidad/issues">github.com/MansillaNicolas/mor-ops-privacidad/issues</a>
+  o escribir al correo de contacto que figura en la ficha de MoR Ops en
+  Google Play.</p>
+
+  <footer class="muted">MoR Ops · Política de privacidad</footer>
+</main>
+</body>
+</html>
