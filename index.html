@@ -54,7 +54,7 @@
 <body>
 <main>
   <h1>Política de privacidad de MoR Ops</h1>
-  <p class="muted">Última actualización: 11 de octubre de 2026 (versiones 1.3 y 1.4 de la app: alertas y eventos, mochila de 72 horas)</p>
+  <p class="muted">Última actualización: 16 de octubre de 2026 (versión 1.5 de la app: desbloqueo con huella o rostro)</p>
 
   <p>MoR Ops es una app de preparación y gestión de emergencias para Android
   (identificador <code>com.mor.morops</code>). Esta política explica qué datos
@@ -171,6 +171,10 @@
     <li>El acceso a la app se protege con un PIN; se guarda solo un hash
     derivado (PBKDF2) en el almacenamiento seguro del sistema, nunca el PIN en
     texto plano.</li>
+    <li>Si lo activas, puedes entrar con la huella o el rostro registrados en
+    el teléfono. La verificación la hace Android: la app solo recibe si fue
+    correcta o no, y no accede a datos biométricos ni los guarda. El PIN sigue
+    funcionando.</li>
     <li>La app se bloquea automáticamente tras unos minutos en segundo plano y
     bloquea temporalmente el acceso después de varios intentos de PIN
     fallidos.</li>
@@ -184,6 +188,7 @@
     <tr><td>Notificaciones</td><td>Avisarte de alertas cerca de tus zonas. Se pide solo cuando activas los avisos.</td></tr>
     <tr><td>Ejecutar al iniciar y mantener activo</td><td>Que las revisiones periódicas de alertas sigan programadas después de reiniciar el teléfono (lo agrega el programador de tareas de Android).</td></tr>
     <tr><td>Vibración</td><td>Señales táctiles y avisos de la app.</td></tr>
+    <tr><td>Huella o rostro (biometría)</td><td>Desbloquear la app sin escribir el PIN, solo si lo activas. La app no recibe datos biométricos.</td></tr>
   </table>
   <p>La linterna y las señales de luz usan el flash a través del sistema, sin
   permiso de cámara: la app no toma fotos ni graba video.</p>
