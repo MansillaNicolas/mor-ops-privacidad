@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MoR Ops · Política de privacidad</title>
 <meta name="description" content="Política de privacidad de la app MoR Ops para Android.">
+<link rel="alternate" hreflang="es" href="https://mansillanicolas.github.io/mor-ops-privacidad/">
+<link rel="alternate" hreflang="it" href="https://mansillanicolas.github.io/mor-ops-privacidad/it/">
+<link rel="alternate" hreflang="en" href="https://mansillanicolas.github.io/mor-ops-privacidad/en/">
 <style>
   :root {
     --bg: #ffffff;
@@ -36,6 +39,8 @@
   h2 { font-size: 1.2rem; margin: 36px 0 8px; color: var(--accent); }
   p, li { color: var(--text); }
   .muted { color: var(--muted); }
+  .lang { margin: 12px 0 0; font-size: .95rem; }
+  .lang strong { color: var(--text); }
   .summary {
     background: var(--card);
     border: 1px solid var(--line);
@@ -54,25 +59,75 @@
 <body>
 <main>
   <h1>Política de privacidad de MoR Ops</h1>
-  <p class="muted">Última actualización: 16 de octubre de 2026 (versión 1.5 de la app: desbloqueo con huella o rostro)</p>
+  <p class="muted">Última actualización: 21 de noviembre de 2026 (versión 1.6 de la app: cuentas, servidor en la Unión Europea e idiomas)</p>
+  <p class="lang"><strong>Español</strong> · <a href="it/" hreflang="it">Italiano</a> · <a href="en/" hreflang="en">English</a></p>
 
   <p>MoR Ops es una app de preparación y gestión de emergencias para Android
   (identificador <code>com.mor.morops</code>). Esta política explica qué datos
-  usa la app, dónde se guardan y qué control tienes sobre ellos.</p>
+  usa la app, dónde se guardan, para qué y qué control tienes sobre ellos, según
+  el Reglamento General de Protección de Datos de la Unión Europea (RGPD).</p>
 
   <div class="summary">
     <strong>En resumen</strong>
     <ul>
-      <li>No hay cuentas, registro ni servidores propios: todo lo que cargas se guarda solo en tu teléfono.</li>
-      <li>No usamos analíticas, publicidad ni SDK de terceros que rastreen tu actividad.</li>
-      <li>No vendemos ni compartimos tus datos con nadie.</li>
-      <li>La app solo se conecta a internet para descargar los mapas de OpenStreetMap y alertas oficiales (clima, sismos, desastres). Nunca envía tu ubicación exacta.</li>
+      <li>Para usar la app creas una cuenta con tu correo y una contraseña. El
+      servidor de cuentas guarda solo tu correo, tu nombre o apodo, el idioma de
+      la app y tu contraseña cifrada, en Alemania (Unión Europea).</li>
+      <li>Todo lo demás que cargas (tu grupo, datos de salud, la mochila,
+      suministros, mapas y puntos guardados) queda solo en tu teléfono.</li>
+      <li>No usamos analíticas, publicidad ni SDK de terceros que rastreen tu
+      actividad. No vendemos ni compartimos tus datos.</li>
+      <li>La app se conecta a internet solo para tu cuenta, los mapas de
+      OpenStreetMap y las alertas oficiales. Nunca envía tu ubicación exacta.</li>
+      <li>Puedes borrar tu cuenta desde la app cuando quieras.</li>
     </ul>
   </div>
 
-  <h2>1. Datos que guarda la app</h2>
-  <p>La información que ingresas se almacena en una base de datos local dentro
-  del almacenamiento privado de la app, en tu dispositivo. Puede incluir:</p>
+  <h2>1. Responsable</h2>
+  <p>El responsable del tratamiento es <strong>[NOMBRE Y APELLIDO DEL RESPONSABLE]</strong>,
+  desarrollador de MoR Ops. Para cualquier consulta sobre tus datos, usa los
+  medios de la sección 16.</p>
+
+  <h2>2. Tu cuenta</h2>
+  <ul>
+    <li><strong>Qué datos guarda el servidor:</strong> tu correo electrónico; tu
+    contraseña, solo cifrada (un hash bcrypt que nadie puede leer); el nombre o
+    apodo que elijas; el idioma de la app, para escribirte en tu idioma; y las
+    fechas de alta, confirmación y último acceso.</li>
+    <li><strong>Para qué:</strong> crear y proteger tu cuenta, confirmar tu
+    correo, restablecer la contraseña y avisarte si alguien la cambia. Base
+    legal: la ejecución del contrato (art. 6.1.b del RGPD); sin esos datos no
+    podemos darte una cuenta.</li>
+    <li><strong>Correos:</strong> solo los necesarios: el código para confirmar
+    el correo, el código para restablecer la contraseña y el aviso de contraseña
+    cambiada. Nunca publicidad.</li>
+    <li><strong>Sesiones:</strong> la app no deja una sesión abierta en el
+    servidor. Se conecta solo para crear la cuenta, entrar, cambiar la
+    contraseña o borrar la cuenta, y cierra la sesión al terminar.</li>
+    <li><strong>Registro de accesos:</strong> por seguridad y para detectar
+    abusos (por ejemplo, intentos masivos de entrar), el servidor registra la
+    fecha, el tipo de acción (crear la cuenta, entrar, cambiar la contraseña) y
+    la dirección IP. Se borra a los 30 días. Base legal: el interés legítimo en
+    la seguridad del servicio (art. 6.1.f del RGPD).</li>
+    <li><strong>Cuánto tiempo:</strong> mientras tengas la cuenta. Si creas una
+    cuenta y no confirmas el correo, se borra sola a los 7 días.</li>
+  </ul>
+
+  <h2>3. Quién más trata los datos de tu cuenta</h2>
+  <table>
+    <tr><th>Empresa</th><th>Qué hace</th><th>Datos</th></tr>
+    <tr><td>Hetzner Online GmbH (Alemania)</td><td>Aloja el servidor de cuentas en centros de datos en Alemania.</td><td>Los de tu cuenta y el registro de accesos.</td></tr>
+    <tr><td>Resend, Inc. (Estados Unidos)</td><td>Envía los correos de la cuenta desde su región de la Unión Europea (Irlanda).</td><td>Tu correo, el idioma y el contenido del mensaje (por ejemplo, el código).</td></tr>
+  </table>
+  <p>Ambas actúan por cuenta del responsable, con contratos de encargo del
+  tratamiento según el art. 28 del RGPD, y no usan tus datos para nada más. Si
+  hubiera transferencias de datos fuera de la Unión Europea, se hacen con las
+  garantías del RGPD (cláusulas contractuales tipo de la Comisión Europea).</p>
+
+  <h2>4. Datos que quedan solo en tu teléfono</h2>
+  <p>La información que cargas en la app se guarda en una base de datos local,
+  dentro del almacenamiento privado de la app en tu dispositivo, y no se sube a
+  ningún servidor. Puede incluir:</p>
   <ul>
     <li>Integrantes de tu grupo: nombre, rol, grupo sanguíneo, alergias,
     habilidades, estado de salud, notas, último lugar visto y dosis de
@@ -81,15 +136,15 @@
     amenaza y notas.</li>
     <li>La lista de tu mochila de emergencia de 72 horas: qué marcaste, las
     fechas de vencimiento que anotaste y cuándo la revisaste.</li>
-    <li>Contactos de emergencia que agregas manualmente.</li>
+    <li>Contactos de emergencia que agregas a mano.</li>
     <li>Puntos guardados en el mapa (waypoints) y su ubicación.</li>
   </ul>
   <p>Estos datos nunca salen del teléfono salvo que tú decidas compartirlos
-  (ver secciones 5 y 6). La app no tiene acceso a tu agenda de contactos, fotos
-  ni archivos, salvo el archivo puntual que elijas al restaurar una copia de
+  (secciones 8 y 9). La app no tiene acceso a tu agenda de contactos, fotos ni
+  archivos, salvo el archivo puntual que elijas al restaurar una copia de
   seguridad o importar un mapa sin conexión.</p>
 
-  <h2>2. Ubicación</h2>
+  <h2>5. Ubicación</h2>
   <p>Con tu permiso, la app usa la ubicación del dispositivo <strong>solo
   mientras está abierta</strong>, para:</p>
   <ul>
@@ -98,17 +153,17 @@
     cuando lo envías;</li>
     <li>guardar un punto en el mapa con tu ubicación actual.</li>
   </ul>
-  <p>Si activas las alertas (sección 4), la app guarda en el teléfono la
+  <p>Si activas las alertas (sección 7), la app guarda en el teléfono la
   última ubicación obtenida con la app abierta, <strong>redondeada a
   aproximadamente 1 km</strong>, para saber si una alerta te afecta aunque la
   app esté cerrada. Se reemplaza con cada nueva ubicación y se ignora pasada
   una semana.</p>
   <p>La app no accede al GPS en segundo plano, no guarda un historial de
-  recorridos y no envía tu ubicación exacta a ningún servidor. Puedes negar o
-  revocar el permiso en cualquier momento desde los ajustes de Android; el
-  resto de la app sigue funcionando.</p>
+  recorridos y no envía tu ubicación a ningún servidor (tampoco al de cuentas).
+  Puedes negar o revocar el permiso en cualquier momento desde los ajustes de
+  Android; el resto de la app sigue funcionando.</p>
 
-  <h2>3. Mapas (OpenStreetMap)</h2>
+  <h2>6. Mapas (OpenStreetMap)</h2>
   <p>Para mostrar el mapa, la app descarga imágenes (teselas) desde los
   servidores de la Fundación OpenStreetMap (<code>tile.openstreetmap.org</code>).
   Como en cualquier conexión web, ese servicio recibe tu dirección IP, la zona
@@ -117,7 +172,7 @@
   sin conexión. El tratamiento de esos datos por parte de OpenStreetMap se rige
   por su <a href="https://osmfoundation.org/wiki/Privacy_Policy">política de privacidad</a>.</p>
 
-  <h2>4. Alertas y eventos</h2>
+  <h2>7. Alertas y eventos</h2>
   <p>La función de alertas muestra en el mapa y te avisa de alertas
   meteorológicas oficiales, sismos, tsunamis, grandes desastres, focos de calor
   detectados por satélite, el nivel de riesgo de viaje por país y, solo si
@@ -126,11 +181,11 @@
   <ul>
     <li><strong>Qué se descarga y de dónde:</strong> archivos públicos del
     Servicio Geológico de EE. UU. (USGS), el Centro Sismológico
-    Euro-Mediterráneo (EMSC), GDACS (Comisión Europea y ONU), el SMN de
-    Argentina y otros servicios meteorológicos nacionales (o el agregador
-    Filtered Alert Hub), los centros de alerta de tsunamis de NOAA, NASA FIRMS,
-    las cancillerías del Reino Unido (FCDO) y de EE. UU., y The GDELT Project
-    (solo con la capa de noticias activada).</li>
+    Euro-Mediterráneo (EMSC), GDACS (Comisión Europea y ONU), servicios
+    meteorológicos nacionales (o el agregador Filtered Alert Hub), los centros
+    de alerta de tsunamis de NOAA, NASA FIRMS, las cancillerías del Reino Unido
+    (FCDO) y de EE. UU., y The GDELT Project (solo con la capa de noticias
+    activada).</li>
     <li><strong>Qué reciben esos servicios:</strong> tu dirección IP y un pedido
     general (un archivo mundial, de un país o de un continente). Para los sismos
     de EMSC, y para los focos de calor si cargas una clave personal de NASA
@@ -148,16 +203,17 @@
   </ul>
   <p>Las alertas son informativas y pueden llegar con demora: MoR Ops no es un
   sistema oficial de alerta temprana. Mantén activadas las alertas de
-  emergencia de tu teléfono.</p>
+  emergencia de tu teléfono (por ejemplo, IT-alert en Italia o ES-Alert en
+  España).</p>
 
-  <h2>5. Mensajes SOS, llamadas y reportes</h2>
+  <h2>8. Mensajes SOS, llamadas y reportes</h2>
   <p>Cuando envías un SOS, llamas a un número de emergencia o compartes un
   reporte de ayuda, la app abre la aplicación de mensajes, teléfono o el menú
   de compartir de tu sistema con el texto ya armado. Tú eliges el destinatario
   y confirmas el envío; MoR Ops no envía mensajes por su cuenta ni recibe copia
   de ellos.</p>
 
-  <h2>6. Copias de seguridad</h2>
+  <h2>9. Copias de seguridad</h2>
   <p>Solo cuando lo pides, la app genera un archivo de copia de seguridad con
   tus datos y abre el menú de compartir para que decidas dónde guardarlo
   (por ejemplo, Drive o una carpeta local). Puedes protegerlo con una
@@ -166,64 +222,80 @@
   desactivadas para esta app, de modo que tus datos no se suben a la nube sin
   que lo decidas.</p>
 
-  <h2>7. Seguridad</h2>
+  <h2>10. Seguridad</h2>
   <ul>
-    <li>El acceso a la app se protege con un PIN; se guarda solo un hash
-    derivado (PBKDF2) en el almacenamiento seguro del sistema, nunca el PIN en
-    texto plano.</li>
-    <li>Si lo activas, puedes entrar con la huella o el rostro registrados en
-    el teléfono. La verificación la hace Android: la app solo recibe si fue
-    correcta o no, y no accede a datos biométricos ni los guarda. El PIN sigue
-    funcionando.</li>
-    <li>La app se bloquea automáticamente tras unos minutos en segundo plano y
-    bloquea temporalmente el acceso después de varios intentos de PIN
-    fallidos.</li>
+    <li>Entras con tu correo y tu contraseña. La contraseña viaja cifrada
+    (HTTPS) y el servidor guarda solo un hash.</li>
+    <li>Para desbloquear la app sin conexión, el teléfono guarda un valor
+    derivado de tu contraseña (PBKDF2) en el almacenamiento seguro del sistema,
+    nunca la contraseña.</li>
+    <li>Si lo activas, puedes desbloquear con la huella o el rostro registrados
+    en el teléfono. La verificación la hace Android: la app solo recibe si fue
+    correcta o no, y no accede a datos biométricos ni los guarda. La contraseña
+    sigue funcionando.</li>
+    <li>La app se bloquea sola tras unos minutos en segundo plano y bloquea
+    temporalmente el acceso después de varios intentos fallidos. El servidor
+    también limita los intentos.</li>
   </ul>
 
-  <h2>8. Permisos de Android</h2>
+  <h2>11. Permisos de Android</h2>
   <table>
     <tr><th>Permiso</th><th>Para qué se usa</th></tr>
     <tr><td>Ubicación (precisa y aproximada)</td><td>Mapa, SOS y puntos guardados, solo con la app abierta.</td></tr>
-    <tr><td>Internet y estado de la red</td><td>Descargar el mapa de OpenStreetMap y las alertas oficiales; esperar a tener Wi-Fi para las descargas grandes.</td></tr>
+    <tr><td>Internet y estado de la red</td><td>Tu cuenta, el mapa de OpenStreetMap y las alertas oficiales; esperar a tener Wi-Fi para las descargas grandes.</td></tr>
     <tr><td>Notificaciones</td><td>Avisarte de alertas cerca de tus zonas. Se pide solo cuando activas los avisos.</td></tr>
     <tr><td>Ejecutar al iniciar y mantener activo</td><td>Que las revisiones periódicas de alertas sigan programadas después de reiniciar el teléfono (lo agrega el programador de tareas de Android).</td></tr>
     <tr><td>Vibración</td><td>Señales táctiles y avisos de la app.</td></tr>
-    <tr><td>Huella o rostro (biometría)</td><td>Desbloquear la app sin escribir el PIN, solo si lo activas. La app no recibe datos biométricos.</td></tr>
+    <tr><td>Huella o rostro (biometría)</td><td>Desbloquear la app sin escribir la contraseña, solo si lo activas. La app no recibe datos biométricos.</td></tr>
   </table>
   <p>La linterna y las señales de luz usan el flash a través del sistema, sin
   permiso de cámara: la app no toma fotos ni graba video.</p>
 
-  <h2>9. Cómo borrar tus datos</h2>
-  <p>Como no hay cuenta ni servidor, no guardamos ninguna copia de tus datos.
-  Puedes eliminarlos por completo de dos formas:</p>
+  <h2>12. Cómo borrar tus datos</h2>
   <ul>
-    <li>desde la app, en <em>Más → Ajustes → Borrar todos los datos</em>;</li>
-    <li>desinstalando la app.</li>
+    <li><strong>Tu cuenta:</strong> desde la app, en <em>Más → Ajustes → Cuenta
+    y seguridad → Borrar cuenta</em>. Se borra al instante del servidor (correo,
+    nombre, idioma y contraseña). Las copias de seguridad del servidor se
+    guardan como máximo 14 días y después se borran solas. También puedes
+    pedirlo por los medios de la sección 16.</li>
+    <li><strong>Los datos del teléfono:</strong> en <em>Más → Ajustes → Borrar
+    todos los datos</em>, o desinstalando la app.</li>
+    <li><strong>Copias que exportaste:</strong> quedan donde las guardaste y
+    debes borrarlas tú.</li>
   </ul>
-  <p>Las copias de seguridad que hayas exportado quedan donde las guardaste y
-  debes borrarlas tú.</p>
 
-  <h2>10. Menores de edad</h2>
+  <h2>13. Tus derechos</h2>
+  <p>Tienes derecho a acceder a tus datos, rectificarlos, borrarlos, limitar
+  su tratamiento, oponerte a él y llevártelos (portabilidad). Varios los
+  puedes ejercer desde la app (cambiar la contraseña, borrar la cuenta); para
+  el resto, escribe por los medios de la sección 16 y te respondemos en un plazo
+  máximo de un mes.</p>
+  <p>Si crees que no tratamos bien tus datos, puedes reclamar ante la autoridad
+  de protección de datos de tu país: en Italia, el
+  <a href="https://www.garanteprivacy.it">Garante per la protezione dei dati personali</a>;
+  en España, la <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>;
+  en otros países, la <a href="https://www.edpb.europa.eu/about-edpb/about-edpb/members_es">autoridad que corresponda</a>.</p>
+
+  <h2>14. Menores de edad</h2>
   <p>La app está pensada para personas adultas que organizan la preparación de
-  su hogar o grupo. No está dirigida a menores de 13 años ni recopila datos de
+  su hogar o grupo. No está dirigida a menores de 16 años ni recopila datos de
   forma intencional sobre ellos; los datos de integrantes menores que cargue un
   adulto quedan solo en su dispositivo.</p>
 
-  <h2>11. Aviso importante</h2>
+  <h2>15. Aviso importante y cambios</h2>
   <p>La información de la app es orientativa y no reemplaza la atención médica
   profesional ni las indicaciones de los servicios de emergencia o de las
-  autoridades. Ante una emergencia, llama al número de emergencias local.</p>
-
-  <h2>12. Cambios en esta política</h2>
+  autoridades. Ante una emergencia, llama al número de emergencias local (en
+  toda la Unión Europea, el 112).</p>
   <p>Si la política cambia, se publicará en esta misma dirección con la fecha
   de actualización. Si un cambio implica usar datos de una forma nueva, la app
   te lo informará antes.</p>
 
-  <h2>13. Contacto</h2>
-  <p>Para consultas sobre privacidad puedes abrir una consulta en
-  <a href="https://github.com/MansillaNicolas/mor-ops-privacidad/issues">github.com/MansillaNicolas/mor-ops-privacidad/issues</a>
-  o escribir al correo de contacto que figura en la ficha de MoR Ops en
-  Google Play.</p>
+  <h2>16. Contacto</h2>
+  <p>Para consultas sobre privacidad o para ejercer tus derechos, escribe al
+  correo de contacto que figura en la ficha de MoR Ops en Google Play o abre
+  una consulta en
+  <a href="https://github.com/MansillaNicolas/mor-ops-privacidad/issues">github.com/MansillaNicolas/mor-ops-privacidad/issues</a>.</p>
 
   <footer class="muted">MoR Ops · Política de privacidad</footer>
 </main>
