@@ -59,7 +59,7 @@
 <body>
 <main>
   <h1>Política de privacidad de MoR Ops</h1>
-  <p class="muted">Última actualización: 21 de noviembre de 2026 (versión 1.6 de la app: cuentas, servidor en la Unión Europea e idiomas)</p>
+  <p class="muted">Última actualización: 22 de noviembre de 2026 (versión 1.7 de la política: página para borrar la cuenta, alertas meteorológicas de Italia y "Avisar que estoy bien")</p>
   <p class="lang"><strong>Español</strong> · <a href="it/" hreflang="it">Italiano</a> · <a href="en/" hreflang="en">English</a></p>
 
   <p>MoR Ops es una app de preparación y gestión de emergencias para Android
@@ -72,13 +72,14 @@
     <ul>
       <li>Para usar la app creas una cuenta con tu correo y una contraseña. El
       servidor de cuentas guarda solo tu correo, tu nombre o apodo, el idioma de
-      la app y tu contraseña cifrada, en Alemania (Unión Europea).</li>
+      la app y tu contraseña cifrada, en Alemania (Unión Europea), más un
+      registro de accesos que se borra a los 30 días.</li>
       <li>Todo lo demás que cargas (tu grupo, datos de salud, la mochila,
       suministros, mapas y puntos guardados) queda solo en tu teléfono.</li>
       <li>No usamos analíticas, publicidad ni SDK de terceros que rastreen tu
       actividad. No vendemos ni compartimos tus datos.</li>
       <li>La app se conecta a internet solo para tu cuenta, los mapas de
-      OpenStreetMap y las alertas oficiales. Nunca envía tu ubicación exacta.</li>
+      OpenStreetMap y las alertas. Nunca envía tu ubicación exacta.</li>
       <li>Puedes borrar tu cuenta desde la app cuando quieras.</li>
     </ul>
   </div>
@@ -103,12 +104,17 @@
     cambiada. Nunca publicidad.</li>
     <li><strong>Sesiones:</strong> la app no deja una sesión abierta en el
     servidor. Se conecta solo para crear la cuenta, entrar, cambiar la
-    contraseña o borrar la cuenta, y cierra la sesión al terminar.</li>
+    contraseña o borrar la cuenta, y cierra la sesión al terminar. Si no puede
+    cerrarla (por ejemplo, porque se cortó la señal), el servidor la borra a
+    los 2 días como máximo, con la dirección IP y el tipo de dispositivo que
+    guarda.</li>
     <li><strong>Registro de accesos:</strong> por seguridad y para detectar
     abusos (por ejemplo, intentos masivos de entrar), el servidor registra la
-    fecha, el tipo de acción (crear la cuenta, entrar, cambiar la contraseña) y
-    la dirección IP. Se borra a los 30 días. Base legal: el interés legítimo en
-    la seguridad del servicio (art. 6.1.f del RGPD).</li>
+    fecha, el tipo de acción (crear la cuenta, entrar, cambiar la contraseña),
+    la dirección IP, tu correo y el identificador de tu cuenta. Los registros
+    de errores del servidor también guardan la dirección IP. Ambos se borran a
+    los 30 días. Base legal: el interés legítimo en la seguridad del servicio
+    (art. 6.1.f del RGPD).</li>
     <li><strong>Cuánto tiempo:</strong> mientras tengas la cuenta. Si creas una
     cuenta y no confirmas el correo, se borra sola a los 7 días.</li>
   </ul>
@@ -149,8 +155,8 @@
   mientras está abierta</strong>, para:</p>
   <ul>
     <li>mostrar tu posición en el mapa;</li>
-    <li>incluir tus coordenadas en un mensaje SOS o en un reporte de ayuda
-    cuando lo envías;</li>
+    <li>incluir tus coordenadas en un mensaje SOS, en el mensaje de "Avisar que
+    estoy bien" o en un reporte de ayuda cuando lo envías;</li>
     <li>guardar un punto en el mapa con tu ubicación actual.</li>
   </ul>
   <p>Si activas las alertas (sección 7), la app guarda en el teléfono la
@@ -174,7 +180,7 @@
 
   <h2>7. Alertas y eventos</h2>
   <p>La función de alertas muestra en el mapa y te avisa de alertas
-  meteorológicas oficiales, sismos, tsunamis, grandes desastres, focos de calor
+  meteorológicas, sismos, tsunamis, grandes desastres, focos de calor
   detectados por satélite, el nivel de riesgo de viaje por país y, solo si
   activas esa capa, noticias de violencia detectadas automáticamente (sin
   verificar).</p>
@@ -182,9 +188,10 @@
     <li><strong>Qué se descarga y de dónde:</strong> archivos públicos del
     Servicio Geológico de EE. UU. (USGS), el Centro Sismológico
     Euro-Mediterráneo (EMSC), GDACS (Comisión Europea y ONU), servicios
-    meteorológicos nacionales (o el agregador Filtered Alert Hub), los centros
-    de alerta de tsunamis de NOAA, NASA FIRMS, las cancillerías del Reino Unido
-    (FCDO) y de EE. UU., y The GDELT Project (solo con la capa de noticias
+    meteorológicos nacionales (o el agregador Filtered Alert Hub), MeteoAlarm
+    (EUMETNET) para las alertas meteorológicas de Italia, los centros de alerta
+    de tsunamis de NOAA, NASA FIRMS, las cancillerías del Reino Unido (FCDO) y
+    de EE. UU., y The GDELT Project (solo con la capa de noticias
     activada).</li>
     <li><strong>Qué reciben esos servicios:</strong> tu dirección IP y un pedido
     general (un archivo mundial, de un país o de un continente). Para los sismos
@@ -192,6 +199,11 @@
     FIRMS, el pedido indica una región rectangular amplia (de al menos unos 500 km
     de lado, alineada a una cuadrícula) que contiene tus zonas. Nunca se
     envían tu ubicación exacta, tus zonas ni sus nombres.</li>
+    <li><strong>Alertas meteorológicas de Italia:</strong> la app baja el canal
+    público de MeteoAlarm para Italia y el archivo CAP de cada aviso. MeteoAlarm
+    recibe solo tu dirección IP y un pedido general de todo el país, nunca tu
+    ubicación. Los límites de las regiones italianas, de ISTAT, vienen dentro de
+    la app y no generan ningún pedido.</li>
     <li><strong>Dónde se compara:</strong> la app decide en el teléfono si un
     evento está cerca de tus zonas o de tu última ubicación.</li>
     <li><strong>Notificaciones:</strong> las genera el propio teléfono; no hay
@@ -207,11 +219,11 @@
   España).</p>
 
   <h2>8. Mensajes SOS, llamadas y reportes</h2>
-  <p>Cuando envías un SOS, llamas a un número de emergencia o compartes un
-  reporte de ayuda, la app abre la aplicación de mensajes, teléfono o el menú
-  de compartir de tu sistema con el texto ya armado. Tú eliges el destinatario
-  y confirmas el envío; MoR Ops no envía mensajes por su cuenta ni recibe copia
-  de ellos.</p>
+  <p>Cuando envías un SOS o usas "Avisar que estoy bien", llamas a un número
+  de emergencia o compartes un reporte de ayuda, la app abre la aplicación de
+  mensajes, teléfono o el menú de compartir de tu sistema con el texto ya
+  armado. Tú eliges el destinatario y confirmas el envío; MoR Ops no envía
+  mensajes por su cuenta ni recibe copia de ellos.</p>
 
   <h2>9. Copias de seguridad</h2>
   <p>Solo cuando lo pides, la app genera un archivo de copia de seguridad con
@@ -241,8 +253,8 @@
   <h2>11. Permisos de Android</h2>
   <table>
     <tr><th>Permiso</th><th>Para qué se usa</th></tr>
-    <tr><td>Ubicación (precisa y aproximada)</td><td>Mapa, SOS y puntos guardados, solo con la app abierta.</td></tr>
-    <tr><td>Internet y estado de la red</td><td>Tu cuenta, el mapa de OpenStreetMap y las alertas oficiales; esperar a tener Wi-Fi para las descargas grandes.</td></tr>
+    <tr><td>Ubicación (precisa y aproximada)</td><td>Mapa, SOS, el aviso de que estás bien y puntos guardados, solo con la app abierta.</td></tr>
+    <tr><td>Internet y estado de la red</td><td>Tu cuenta, el mapa de OpenStreetMap y las alertas; esperar a tener Wi-Fi para las descargas grandes.</td></tr>
     <tr><td>Notificaciones</td><td>Avisarte de alertas cerca de tus zonas. Se pide solo cuando activas los avisos.</td></tr>
     <tr><td>Ejecutar al iniciar y mantener activo</td><td>Que las revisiones periódicas de alertas sigan programadas después de reiniciar el teléfono (lo agrega el programador de tareas de Android).</td></tr>
     <tr><td>Vibración</td><td>Señales táctiles y avisos de la app.</td></tr>
@@ -253,11 +265,16 @@
 
   <h2>12. Cómo borrar tus datos</h2>
   <ul>
-    <li><strong>Tu cuenta:</strong> desde la app, en <em>Más → Ajustes → Cuenta
-    y seguridad → Borrar cuenta</em>. Se borra al instante del servidor (correo,
-    nombre, idioma y contraseña). Las copias de seguridad del servidor se
-    guardan como máximo 14 días y después se borran solas. También puedes
-    pedirlo por los medios de la sección 16.</li>
+    <li><strong>Tu cuenta:</strong> en la app, ve a <em>Más → Ajustes → en
+    "Cuenta y seguridad", toca tu correo → Borrar cuenta</em>. La cuenta
+    (correo, nombre, idioma y contraseña) se borra al instante del servidor,
+    salvo el registro de accesos (con tu correo y tu dirección IP), que se
+    conserva hasta 30 días. Las copias de seguridad del servidor pueden
+    conservar estos datos, y los registros de errores del servidor, hasta 14
+    días más y después se borran solas. También
+    puedes pedir el borrado por correo, sin tener la app: los pasos, qué se
+    borra y qué se conserva están en la página
+    <a href="delete-account/#es">Borrar tu cuenta de MoR Ops</a>.</li>
     <li><strong>Los datos del teléfono:</strong> en <em>Más → Ajustes → Borrar
     todos los datos</em>, o desinstalando la app.</li>
     <li><strong>Copias que exportaste:</strong> quedan donde las guardaste y
@@ -293,9 +310,12 @@
 
   <h2>16. Contacto</h2>
   <p>Para consultas sobre privacidad o para ejercer tus derechos, escribe al
-  correo de contacto que figura en la ficha de MoR Ops en Google Play o abre
-  una consulta en
-  <a href="https://github.com/MansillaNicolas/mor-ops-privacidad/issues">github.com/MansillaNicolas/mor-ops-privacidad/issues</a>.</p>
+  correo de contacto que figura en la ficha de MoR Ops en Google Play. También
+  puedes hacer consultas generales en
+  <a href="https://github.com/MansillaNicolas/mor-ops-privacidad/issues">github.com/MansillaNicolas/mor-ops-privacidad/issues</a>,
+  pero esas consultas son públicas: no sirven para pedir el borrado de tu
+  cuenta ni para enviar datos personales; para eso está el correo de
+  contacto.</p>
 
   <footer class="muted">MoR Ops · Política de privacidad</footer>
 </main>

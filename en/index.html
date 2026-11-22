@@ -59,7 +59,7 @@
 <body>
 <main>
   <h1>MoR Ops privacy policy</h1>
-  <p class="muted">Last updated: 21 November 2026 (app version 1.6: accounts, a server in the European Union and new languages)</p>
+  <p class="muted">Last updated: 22 November 2026 (policy version 1.7: account deletion page, weather warnings in Italy and "Tell contacts you're OK")</p>
   <p class="lang"><a href="../" hreflang="es">Español</a> · <a href="../it/" hreflang="it">Italiano</a> · <strong>English</strong></p>
 
   <p>MoR Ops is an emergency preparedness and management app for Android
@@ -74,13 +74,13 @@
       <li>To use the app you create an account with your email address and a
       password. The account server stores only your email, your name or
       nickname, the app language and your encrypted password, in Germany
-      (European Union).</li>
+      (European Union), plus an access log that is deleted after 30 days.</li>
       <li>Everything else you enter (your group, health data, grab bag,
       supplies, maps and saved points) stays on your phone only.</li>
       <li>We use no analytics, no advertising and no third-party SDKs that
       track your activity. We do not sell or share your data.</li>
       <li>The app only connects to the internet for your account, OpenStreetMap
-      maps and official alerts. It never sends your exact location.</li>
+      maps and alerts. It never sends your exact location.</li>
       <li>You can delete your account from the app at any time.</li>
     </ul>
   </div>
@@ -105,12 +105,17 @@
     password was changed. Never advertising.</li>
     <li><strong>Sessions:</strong> the app does not keep a session open on the
     server. It connects only to create the account, sign in, change the
-    password or delete the account, and closes the session when done.</li>
+    password or delete the account, and closes the session when done. If it
+    cannot close it (for example, because the signal dropped), the server
+    deletes it within 2 days, together with the IP address and device type it
+    stores.</li>
     <li><strong>Access log:</strong> for security and to detect abuse (for
     example, mass sign-in attempts), the server logs the date, the type of
-    action (creating the account, signing in, changing the password) and the
-    IP address. It is deleted after 30 days. Legal basis: legitimate interest
-    in the security of the service (Art. 6(1)(f) GDPR).</li>
+    action (creating the account, signing in, changing the password), the IP
+    address, your email address and your account ID. The server's error logs
+    also contain the IP address. Both are deleted after 30 days. Legal basis:
+    legitimate interest in the security of the service (Art. 6(1)(f)
+    GDPR).</li>
     <li><strong>How long:</strong> for as long as you have the account. If you
     create an account and do not confirm your email, it is deleted
     automatically after 7 days.</li>
@@ -153,8 +158,8 @@
   while it is open</strong>, to:</p>
   <ul>
     <li>show your position on the map;</li>
-    <li>include your coordinates in an SOS message or a help report when you
-    send it;</li>
+    <li>include your coordinates in an SOS message, the "Tell contacts you're
+    OK" message or a help report when you send it;</li>
     <li>save a point on the map with your current location.</li>
   </ul>
   <p>If you turn on alerts (section 7), the app stores on the phone the last
@@ -176,7 +181,7 @@
   data is governed by its <a href="https://osmfoundation.org/wiki/Privacy_Policy">privacy policy</a>.</p>
 
   <h2>7. Alerts and events</h2>
-  <p>The alerts feature shows on the map, and notifies you of, official
+  <p>The alerts feature shows on the map, and notifies you of,
   weather warnings, earthquakes, tsunamis, major disasters, fires detected by
   satellite, the travel risk level by country and, only if you turn that
   layer on, automatically detected (unverified) news of violence.</p>
@@ -184,16 +189,22 @@
     <li><strong>What is downloaded and from where:</strong> public files from
     the United States Geological Survey (USGS), the European-Mediterranean
     Seismological Centre (EMSC), GDACS (European Commission and UN), national
-    weather services (or the Filtered Alert Hub aggregator), NOAA's tsunami
-    warning centres, NASA FIRMS, the foreign ministries of the United Kingdom
-    (FCDO) and the United States, and The GDELT Project (only with the news
-    layer turned on).</li>
+    weather services (or the Filtered Alert Hub aggregator), MeteoAlarm
+    (EUMETNET) for weather warnings in Italy, NOAA's tsunami warning centres,
+    NASA FIRMS, the foreign ministries of the United Kingdom (FCDO) and the
+    United States, and The GDELT Project (only with the news layer turned
+    on).</li>
     <li><strong>What those services receive:</strong> your IP address and a
     general request (a worldwide, country or continent file). For EMSC
     earthquakes, and for fires if you enter a personal NASA FIRMS key, the
     request specifies a large rectangular region (at least about 500 km wide,
     aligned to a grid) containing your areas. Your exact location, your areas
     and their names are never sent.</li>
+    <li><strong>Weather warnings in Italy:</strong> the app downloads
+    MeteoAlarm's public feed for Italy and the CAP file of each warning.
+    MeteoAlarm receives only your IP address and a general request for the
+    whole country, never your location. The boundaries of the Italian regions,
+    from ISTAT, are built into the app and do not generate any request.</li>
     <li><strong>Where the matching happens:</strong> the phone decides whether
     an event is near your areas or your last location.</li>
     <li><strong>Notifications:</strong> they are generated by the phone itself;
@@ -207,10 +218,11 @@
   (for example, IT-alert in Italy or EU-Alert in other EU countries).</p>
 
   <h2>8. SOS messages, calls and reports</h2>
-  <p>When you send an SOS, call an emergency number or share a help report,
-  the app opens your messaging app, your phone app or your system's share
-  menu with the text ready. You choose the recipient and confirm the sending;
-  MoR Ops never sends messages on its own and receives no copy of them.</p>
+  <p>When you send an SOS or use "Tell contacts you're OK", call an emergency
+  number or share a help report, the app opens your messaging app, your phone
+  app or your system's share menu with the text ready. You choose the
+  recipient and confirm the sending; MoR Ops never sends messages on its own
+  and receives no copy of them.</p>
 
   <h2>9. Backups</h2>
   <p>Only when you ask for it, the app creates a backup file with your data
@@ -239,8 +251,8 @@
   <h2>11. Android permissions</h2>
   <table>
     <tr><th>Permission</th><th>What it is used for</th></tr>
-    <tr><td>Location (precise and approximate)</td><td>Map, SOS and saved points, only while the app is open.</td></tr>
-    <tr><td>Internet and network state</td><td>Your account, the OpenStreetMap map and official alerts; waiting for Wi-Fi before large downloads.</td></tr>
+    <tr><td>Location (precise and approximate)</td><td>Map, SOS, the message telling your contacts you're OK and saved points, only while the app is open.</td></tr>
+    <tr><td>Internet and network state</td><td>Your account, the OpenStreetMap map and alerts; waiting for Wi-Fi before large downloads.</td></tr>
     <tr><td>Notifications</td><td>Warning you of alerts near your areas. Requested only when you turn alerts on.</td></tr>
     <tr><td>Run at startup and stay awake</td><td>Keeping the periodic alert checks scheduled after the phone restarts (added by Android's task scheduler).</td></tr>
     <tr><td>Vibration</td><td>Haptic signals and app notices.</td></tr>
@@ -251,11 +263,16 @@
 
   <h2>12. How to delete your data</h2>
   <ul>
-    <li><strong>Your account:</strong> from the app, in <em>More → Settings →
-    Account and security → Delete account</em>. It is deleted from the server
-    immediately (email, name, language and password). The server's backups are
-    kept for at most 14 days and then delete themselves. You can also ask for
-    it using the contact details in section 16.</li>
+    <li><strong>Your account:</strong> in the app, go to <em>More → Settings →
+    under "Account and security", tap your email address → Delete
+    account</em>. The account (email, name, language and password) is deleted
+    from the server immediately, except for the access log (with your email
+    address and IP address), which is kept for up to 30 days. The server's
+    backups may keep this data, and the server's error logs, for up to 14
+    more days and are then deleted
+    automatically. You can also ask for deletion by email, without having the
+    app: the steps, what is deleted and what is kept are on the
+    <a href="../delete-account/#en">Delete your MoR Ops account</a> page.</li>
     <li><strong>The data on your phone:</strong> in <em>More → Settings →
     Delete all data</em>, or by uninstalling the app.</li>
     <li><strong>Backups you exported:</strong> they stay where you saved them
@@ -291,8 +308,12 @@
 
   <h2>16. Contact</h2>
   <p>For privacy questions or to exercise your rights, write to the contact
-  email shown on the MoR Ops listing on Google Play or open an issue at
-  <a href="https://github.com/MansillaNicolas/mor-ops-privacidad/issues">github.com/MansillaNicolas/mor-ops-privacidad/issues</a>.</p>
+  email shown on the MoR Ops listing on Google Play. You can also ask general
+  questions by opening an issue at
+  <a href="https://github.com/MansillaNicolas/mor-ops-privacidad/issues">github.com/MansillaNicolas/mor-ops-privacidad/issues</a>,
+  but GitHub issues are public: they are not the place to ask for your
+  account to be deleted or to send personal data. Use the contact email for
+  that.</p>
 
   <footer class="muted">MoR Ops · Privacy policy</footer>
 </main>
