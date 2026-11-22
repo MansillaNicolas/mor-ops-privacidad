@@ -79,7 +79,7 @@
       <li>No usamos analíticas, publicidad ni SDK de terceros que rastreen tu
       actividad. No vendemos ni compartimos tus datos.</li>
       <li>La app se conecta a internet solo para tu cuenta, los mapas de
-      OpenStreetMap y las alertas oficiales. Nunca envía tu ubicación exacta.</li>
+      OpenStreetMap y las alertas. Nunca envía tu ubicación exacta.</li>
       <li>Puedes borrar tu cuenta desde la app cuando quieras.</li>
     </ul>
   </div>
@@ -104,7 +104,10 @@
     cambiada. Nunca publicidad.</li>
     <li><strong>Sesiones:</strong> la app no deja una sesión abierta en el
     servidor. Se conecta solo para crear la cuenta, entrar, cambiar la
-    contraseña o borrar la cuenta, y cierra la sesión al terminar.</li>
+    contraseña o borrar la cuenta, y cierra la sesión al terminar. Si no puede
+    cerrarla (por ejemplo, porque se cortó la señal), el servidor la borra a
+    los 2 días como máximo, con la dirección IP y el tipo de dispositivo que
+    guarda.</li>
     <li><strong>Registro de accesos:</strong> por seguridad y para detectar
     abusos (por ejemplo, intentos masivos de entrar), el servidor registra la
     fecha, el tipo de acción (crear la cuenta, entrar, cambiar la contraseña),
@@ -177,7 +180,7 @@
 
   <h2>7. Alertas y eventos</h2>
   <p>La función de alertas muestra en el mapa y te avisa de alertas
-  meteorológicas oficiales, sismos, tsunamis, grandes desastres, focos de calor
+  meteorológicas, sismos, tsunamis, grandes desastres, focos de calor
   detectados por satélite, el nivel de riesgo de viaje por país y, solo si
   activas esa capa, noticias de violencia detectadas automáticamente (sin
   verificar).</p>
@@ -251,7 +254,7 @@
   <table>
     <tr><th>Permiso</th><th>Para qué se usa</th></tr>
     <tr><td>Ubicación (precisa y aproximada)</td><td>Mapa, SOS, el aviso de que estás bien y puntos guardados, solo con la app abierta.</td></tr>
-    <tr><td>Internet y estado de la red</td><td>Tu cuenta, el mapa de OpenStreetMap y las alertas oficiales; esperar a tener Wi-Fi para las descargas grandes.</td></tr>
+    <tr><td>Internet y estado de la red</td><td>Tu cuenta, el mapa de OpenStreetMap y las alertas; esperar a tener Wi-Fi para las descargas grandes.</td></tr>
     <tr><td>Notificaciones</td><td>Avisarte de alertas cerca de tus zonas. Se pide solo cuando activas los avisos.</td></tr>
     <tr><td>Ejecutar al iniciar y mantener activo</td><td>Que las revisiones periódicas de alertas sigan programadas después de reiniciar el teléfono (lo agrega el programador de tareas de Android).</td></tr>
     <tr><td>Vibración</td><td>Señales táctiles y avisos de la app.</td></tr>
@@ -267,7 +270,8 @@
     (correo, nombre, idioma y contraseña) se borra al instante del servidor,
     salvo el registro de accesos (con tu correo y tu dirección IP), que se
     conserva hasta 30 días. Las copias de seguridad del servidor pueden
-    conservar estos datos hasta 14 días más y después se borran solas. También
+    conservar estos datos, y los registros de errores del servidor, hasta 14
+    días más y después se borran solas. También
     puedes pedir el borrado por correo, sin tener la app: los pasos, qué se
     borra y qué se conserva están en la página
     <a href="delete-account/#es">Borrar tu cuenta de MoR Ops</a>.</li>

@@ -80,7 +80,7 @@
       <li>We use no analytics, no advertising and no third-party SDKs that
       track your activity. We do not sell or share your data.</li>
       <li>The app only connects to the internet for your account, OpenStreetMap
-      maps and official alerts. It never sends your exact location.</li>
+      maps and alerts. It never sends your exact location.</li>
       <li>You can delete your account from the app at any time.</li>
     </ul>
   </div>
@@ -105,7 +105,10 @@
     password was changed. Never advertising.</li>
     <li><strong>Sessions:</strong> the app does not keep a session open on the
     server. It connects only to create the account, sign in, change the
-    password or delete the account, and closes the session when done.</li>
+    password or delete the account, and closes the session when done. If it
+    cannot close it (for example, because the signal dropped), the server
+    deletes it within 2 days, together with the IP address and device type it
+    stores.</li>
     <li><strong>Access log:</strong> for security and to detect abuse (for
     example, mass sign-in attempts), the server logs the date, the type of
     action (creating the account, signing in, changing the password), the IP
@@ -178,7 +181,7 @@
   data is governed by its <a href="https://osmfoundation.org/wiki/Privacy_Policy">privacy policy</a>.</p>
 
   <h2>7. Alerts and events</h2>
-  <p>The alerts feature shows on the map, and notifies you of, official
+  <p>The alerts feature shows on the map, and notifies you of,
   weather warnings, earthquakes, tsunamis, major disasters, fires detected by
   satellite, the travel risk level by country and, only if you turn that
   layer on, automatically detected (unverified) news of violence.</p>
@@ -249,7 +252,7 @@
   <table>
     <tr><th>Permission</th><th>What it is used for</th></tr>
     <tr><td>Location (precise and approximate)</td><td>Map, SOS, the message telling your contacts you're OK and saved points, only while the app is open.</td></tr>
-    <tr><td>Internet and network state</td><td>Your account, the OpenStreetMap map and official alerts; waiting for Wi-Fi before large downloads.</td></tr>
+    <tr><td>Internet and network state</td><td>Your account, the OpenStreetMap map and alerts; waiting for Wi-Fi before large downloads.</td></tr>
     <tr><td>Notifications</td><td>Warning you of alerts near your areas. Requested only when you turn alerts on.</td></tr>
     <tr><td>Run at startup and stay awake</td><td>Keeping the periodic alert checks scheduled after the phone restarts (added by Android's task scheduler).</td></tr>
     <tr><td>Vibration</td><td>Haptic signals and app notices.</td></tr>
@@ -265,7 +268,8 @@
     account</em>. The account (email, name, language and password) is deleted
     from the server immediately, except for the access log (with your email
     address and IP address), which is kept for up to 30 days. The server's
-    backups may keep this data for up to 14 more days and are then deleted
+    backups may keep this data, and the server's error logs, for up to 14
+    more days and are then deleted
     automatically. You can also ask for deletion by email, without having the
     app: the steps, what is deleted and what is kept are on the
     <a href="../delete-account/#en">Delete your MoR Ops account</a> page.</li>

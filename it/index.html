@@ -82,7 +82,7 @@
       <li>Non usiamo strumenti di analisi, pubblicità né SDK di terzi che
       tracciano la tua attività. Non vendiamo né condividiamo i tuoi dati.</li>
       <li>L'app si collega a internet solo per il tuo account, le mappe di
-      OpenStreetMap e le allerte ufficiali. Non invia mai la tua posizione
+      OpenStreetMap e le allerte. Non invia mai la tua posizione
       esatta.</li>
       <li>Puoi eliminare il tuo account dall'app quando vuoi.</li>
     </ul>
@@ -109,7 +109,10 @@
     password cambiata. Mai pubblicità.</li>
     <li><strong>Sessioni:</strong> l'app non lascia una sessione aperta sul
     server. Si collega solo per creare l'account, accedere, cambiare la
-    password o eliminare l'account, e chiude la sessione al termine.</li>
+    password o eliminare l'account, e chiude la sessione al termine. Se non
+    riesce a chiuderla (per esempio perché manca il segnale), il server la
+    cancella entro 2 giorni, con l'indirizzo IP e il tipo di dispositivo che
+    conserva.</li>
     <li><strong>Registro degli accessi:</strong> per sicurezza e per
     individuare abusi (per esempio tentativi di accesso in massa), il server
     registra la data, il tipo di azione (creazione dell'account, accesso,
@@ -183,8 +186,8 @@
   dalla sua <a href="https://osmfoundation.org/wiki/Privacy_Policy">informativa sulla privacy</a>.</p>
 
   <h2>7. Allerte ed eventi</h2>
-  <p>La funzione allerte mostra sulla mappa e ti avvisa di allerte meteo
-  ufficiali, terremoti, tsunami, grandi disastri, incendi rilevati da
+  <p>La funzione allerte mostra sulla mappa e ti avvisa di allerte meteo,
+  terremoti, tsunami, grandi disastri, incendi rilevati da
   satellite, il livello di rischio dei viaggi per paese e, solo se attivi quel
   livello, notizie di violenza rilevate automaticamente (non verificate).</p>
   <ul>
@@ -256,7 +259,7 @@
   <table>
     <tr><th>Permesso</th><th>A cosa serve</th></tr>
     <tr><td>Posizione (precisa e approssimativa)</td><td>Mappa, SOS, l'avviso che stai bene e punti salvati, solo con l'app aperta.</td></tr>
-    <tr><td>Internet e stato della rete</td><td>Il tuo account, la mappa di OpenStreetMap e le allerte ufficiali; attendere il Wi-Fi per i download pesanti.</td></tr>
+    <tr><td>Internet e stato della rete</td><td>Il tuo account, la mappa di OpenStreetMap e le allerte; attendere il Wi-Fi per i download pesanti.</td></tr>
     <tr><td>Notifiche</td><td>Avvisarti delle allerte vicino alle tue zone. Viene chiesto solo quando attivi gli avvisi.</td></tr>
     <tr><td>Avvio all'accensione e mantenimento attivo</td><td>Mantenere programmati i controlli periodici delle allerte dopo il riavvio del telefono (lo aggiunge il pianificatore di attività di Android).</td></tr>
     <tr><td>Vibrazione</td><td>Segnali tattili e avvisi dell'app.</td></tr>
@@ -272,7 +275,8 @@
     account</em>. L'account (email, nome, lingua e password) viene cancellato
     subito dal server, tranne il registro degli accessi (con la tua email e il
     tuo indirizzo IP), che viene conservato fino a 30 giorni. I backup del
-    server possono conservare questi dati per altri 14 giorni al massimo e poi
+    server possono conservare questi dati, e i registri degli errori del
+    server, per altri 14 giorni al massimo e poi
     si cancellano da soli. Puoi anche chiedere l'eliminazione via email, senza
     avere l'app: i passaggi, cosa viene eliminato e cosa viene conservato sono
     nella pagina
