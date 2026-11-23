@@ -179,6 +179,11 @@
   of your movements and does not send your location to any server (not even
   the account server). You can refuse or revoke the permission at any time in
   Android's settings; the rest of the app keeps working.</p>
+  <p><strong>On the web (morops.app):</strong> the location permission is
+  requested and managed by your browser (you can revoke it in its settings) and
+  the location lives only in the tab's memory. The map images requested from our
+  server show which area you are looking at, but not your exact location, and
+  the server does not log who requests them (section 17).</p>
 
   <h2>6. Maps (OpenStreetMap)</h2>
   <p>To show the map, the app downloads images (tiles) from the OpenStreetMap
@@ -239,6 +244,8 @@
   it is encrypted with AES-256-GCM and cannot be read without that password.
   Android's automatic backups are turned off for this app, so your data is
   not uploaded to the cloud unless you decide so.</p>
+  <p><strong>On the web</strong>, the backup is downloaded as a file and is
+  always encrypted with a password you choose.</p>
 
   <h2>10. Security</h2>
   <ul>
@@ -254,6 +261,10 @@
     <li>The app locks itself after a few minutes in the background and
     temporarily blocks access after several failed attempts. The server also
     limits attempts.</li>
+    <li><strong>On the web</strong>, the session locks after 15 minutes without
+    use, or after 5 minutes with the tab hidden. The lock asks for your password
+    again, but the data stays in the tab's memory until you close it or use
+    "Delete all data": on a shared computer, sign out when you are done.</li>
   </ul>
 
   <h2>11. Android permissions</h2>
@@ -280,7 +291,9 @@
     app: the steps, what is deleted and what is kept are on the
     <a href="../delete-account/#en">Delete your MoR Ops account</a> page.</li>
     <li><strong>The data on your phone:</strong> in <em>More → Settings →
-    Delete all data</em>, or by uninstalling the app.</li>
+    Delete all data</em>, or by uninstalling the app. <strong>On the web:</strong>
+    with <em>Delete all data</em> or <em>Sign out</em> (they erase everything and
+    reload the page), or simply by closing the tab.</li>
     <li><strong>Backups you exported:</strong> they stay where you saved them
     and you need to delete them yourself.</li>
   </ul>
@@ -326,30 +339,47 @@
   <p>The <strong>morops.app</strong> website is the MoR Ops app in the browser:
   the same app, with the same account. It uses no cookies, analytics or
   advertising, and loads no third-party fonts, scripts, maps or videos:
-  everything is requested from its own server.</p>
+  everything is requested from its own server. There are two addresses with the
+  same app, the same account and the same server: <strong>morops.app</strong>
+  and <strong>beta.morops.app</strong> (where we test versions before publishing
+  them, not indexed by search engines). Everything in this section applies to
+  both.</p>
   <ul>
     <li><strong>What the browser stores:</strong> only your language, the theme
-    (light or dark) and whether you have already seen the intro tour, in the
-    browser's local storage (<code>localStorage</code>, keys starting with
+    (dark or red-light mode) and whether you have already seen the intro tour,
+    in the browser's local storage (<code>localStorage</code>, keys starting with
     <code>web:</code>). This is not personal data and is not sent to the
-    server. You can delete it from your browser settings.</li>
+    server. You can delete it from your browser settings. The site also asks the
+    browser <strong>not to keep alerts or map images in its cache</strong>,
+    <strong>not to offer to save your password or email</strong> when you close
+    the account screens, and it puts no personal data (your email, names, zones)
+    in the address of the pages or in the browsing history.</li>
     <li><strong>Your data on the web:</strong> what you enter (group, health,
     grab bag, supplies, map points…) lives in the tab's memory and <strong>is
     erased when you close or reload it</strong>; it is not saved on the device
     or on any server. If you want to keep it, you can export a backup encrypted
-    with a password and restore it later (also in the phone app).</li>
+    with a password, which is downloaded as a file, and restore it later (also
+    in the phone app). The inactivity lock (section 10) does not erase the tab's
+    data.</li>
     <li><strong>Your account:</strong> you sign in with the same account as in
     the app, and it works the same way: the site signs in, checks your account
     and closes the session on the server; no session or account data is left
     stored in the browser. Account data and the access log are those of
-    sections 2 and 3.</li>
+    sections 2 and 3. Your browser's password manager may still fill in the
+    fields if you already have a password saved for your account; on a shared
+    computer, do not save it.</li>
     <li><strong>Alerts and map:</strong> they go through our server, which
     requests those public responses on your behalf (MeteoAlarm, OpenStreetMap
-    and the other sources in sections 6 and 7) and keeps temporary copies: 5
-    minutes for alerts and 14 days for map tiles. Those copies have nothing to
+    and the other sources in sections 6 and 7) and keeps temporary copies: up to
+    5 minutes for alerts (if the source fails, it does not hand you an old copy:
+    you will see the error) and 14 days for map tiles, except highly zoomed-in
+    ones (a street or a house), which are not kept. Those copies have nothing to
     do with you: the server does not know who requested them and does not log
-    visits. That is why the sources only see our server, never your IP
-    address.</li>
+    visits. That is why the sources only see our server, never your IP address.
+    <strong>Personal FIRMS key:</strong> if you enter it in the alert settings,
+    it travels in the request address to our server, which uses it to request
+    the data from NASA on your behalf; it is not kept in the cache or in any
+    log.</li>
     <li><strong>Who serves it:</strong> the same server as the MoR Ops API,
     hosted by Hetzner Online GmbH in Nuremberg (Germany, European Union), which
     is listed as a processor in section 3. The server receives your IP address

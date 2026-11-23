@@ -183,6 +183,11 @@
   percorsi e non invia la tua posizione ad alcun server (nemmeno a quello degli
   account). Puoi negare o revocare il permesso in qualsiasi momento dalle
   impostazioni di Android; il resto dell'app continua a funzionare.</p>
+  <p><strong>Sul web (morops.app):</strong> il permesso di posizione lo chiede e
+  lo gestisce il tuo browser (puoi revocarlo dalle sue impostazioni) e la
+  posizione vive solo nella memoria della scheda. Le immagini della mappa
+  richieste al nostro server indicano quale zona stai guardando, ma non la tua
+  posizione esatta, e il server non registra chi le richiede (sezione 17).</p>
 
   <h2>6. Mappe (OpenStreetMap)</h2>
   <p>Per mostrare la mappa, l'app scarica immagini (tile) dai server della
@@ -245,7 +250,9 @@
   Drive o una cartella locale). Puoi proteggerlo con una password: in tal caso
   viene cifrato con AES-256-GCM e senza quella password non si può leggere. I
   backup automatici di Android sono disattivati per questa app, quindi i tuoi
-  dati non vengono caricati sul cloud senza che tu lo decida.</p>
+    dati non vengono caricati sul cloud senza che tu lo decida.</p>
+  <p><strong>Sul web</strong> il backup viene scaricato come file e viene sempre
+  cifrato con una password che scegli tu.</p>
 
   <h2>10. Sicurezza</h2>
   <ul>
@@ -261,6 +268,11 @@
     <li>L'app si blocca da sola dopo alcuni minuti in background e blocca
     temporaneamente l'accesso dopo diversi tentativi falliti. Anche il server
     limita i tentativi.</li>
+    <li><strong>Sul web</strong> la sessione si blocca dopo 15 minuti di
+    inattività, o dopo 5 minuti con la scheda nascosta. Il blocco chiede di nuovo
+    la password, ma i dati restano nella memoria della scheda finché non la
+    chiudi o usi «Elimina tutti i dati»: su un computer condiviso, esci
+    dall'account quando hai finito.</li>
   </ul>
 
   <h2>11. Permessi di Android</h2>
@@ -288,7 +300,10 @@
     nella pagina
     <a href="../delete-account/#it">Eliminare il tuo account MoR Ops</a>.</li>
     <li><strong>I dati del telefono:</strong> in <em>Altro → Impostazioni →
-    Elimina tutti i dati</em>, oppure disinstallando l'app.</li>
+    Elimina tutti i dati</em>, oppure disinstallando l'app. <strong>Sul
+    web:</strong> con <em>Elimina tutti i dati</em> o <em>Esci</em> (cancellano
+    tutto e ricaricano la pagina), oppure semplicemente chiudendo la
+    scheda.</li>
     <li><strong>Backup che hai esportato:</strong> restano dove li hai salvati e
     devi cancellarli tu.</li>
   </ul>
@@ -333,31 +348,49 @@
   <p>Il sito <strong>morops.app</strong> è l'app MoR Ops nel browser: la stessa
   app, con lo stesso account. Non usa cookie, strumenti di analisi né
   pubblicità, e non carica font, script, mappe o video di terzi: chiede tutto
-  al proprio server.</p>
+  al proprio server. Ci sono due indirizzi con la stessa app, lo stesso account
+  e lo stesso server: <strong>morops.app</strong> e
+  <strong>beta.morops.app</strong> (dove proviamo le versioni prima di
+  pubblicarle, senza indicizzazione nei motori di ricerca). Tutto ciò che dice
+  questa sezione vale per entrambi.</p>
   <ul>
     <li><strong>Cosa salva il browser:</strong> solo la tua lingua, il tema
-    (chiaro o scuro) e se hai già visto il percorso iniziale, nella memoria
-    locale del browser (<code>localStorage</code>, chiavi che iniziano con
-    <code>web:</code>). Non sono dati personali e non vengono inviati al
-    server. Si cancellano dalle impostazioni del browser.</li>
+    (scuro o modalità luce rossa) e se hai già visto il percorso iniziale, nella
+    memoria locale del browser (<code>localStorage</code>, chiavi che iniziano
+    con <code>web:</code>). Non sono dati personali e non vengono inviati al
+    server. Si cancellano dalle impostazioni del browser. Inoltre il sito chiede
+    al browser di <strong>non conservare nella sua cache</strong> le allerte né
+    le immagini della mappa, di <strong>non proporre di salvare la tua password
+    né la tua email</strong> quando chiudi le schermate dell'account, e non mette
+    dati personali (la tua email, nomi, zone) nell'indirizzo delle pagine né
+    nella cronologia di navigazione.</li>
     <li><strong>I tuoi dati sul web:</strong> ciò che inserisci (gruppo,
     salute, zaino, scorte, punti sulla mappa…) vive nella memoria della scheda
     e <strong>si cancella quando la chiudi o la ricarichi</strong>; non viene
     salvato sul dispositivo né su alcun server. Se vuoi conservarlo, puoi
-    esportare un backup cifrato con password e ripristinarlo più tardi (anche
-    nell'app del telefono).</li>
+    esportare un backup cifrato con password, che viene scaricato come file, e
+    ripristinarlo più tardi (anche nell'app del telefono). Il blocco per
+    inattività (sezione 10) non cancella i dati della scheda.</li>
     <li><strong>Il tuo account:</strong> accedi con lo stesso account dell'app e
     funziona allo stesso modo: il sito accede, verifica il tuo account e chiude
     la sessione sul server; nel browser non resta nessuna sessione né dato
     dell'account. I dati dell'account e il registro degli accessi sono quelli
-    delle sezioni 2 e 3.</li>
+    delle sezioni 2 e 3. I gestori di password del tuo browser possono comunque
+    compilare i campi se hai già una password salvata per il tuo account; su un
+    computer condiviso non salvarla.</li>
     <li><strong>Allerte e mappa:</strong> passano dal nostro server, che chiede
     queste risposte pubbliche per tuo conto (MeteoAlarm, OpenStreetMap e le
-    altre fonti delle sezioni 6 e 7) e ne conserva copie temporanee: 5 minuti
-    per le allerte e 14 giorni per le tessere della mappa. Quelle copie non
-    hanno nulla a che vedere con te: il server non sa chi le ha richieste e non
-    registra le visite. Per questo le fonti vedono solo il nostro server, mai il
-    tuo indirizzo IP.</li>
+    altre fonti delle sezioni 6 e 7) e ne conserva copie temporanee: fino a 5
+    minuti per le allerte (se la fonte non risponde, non ti consegna una copia
+    vecchia: vedrai l'errore) e 14 giorni per le tessere della mappa, tranne
+    quelle con molto ingrandimento (una strada o una casa), che non vengono
+    conservate. Quelle copie non hanno nulla a che vedere con te: il server non
+    sa chi le ha richieste e non registra le visite. Per questo le fonti vedono
+    solo il nostro server, mai il tuo indirizzo IP. <strong>Chiave personale di
+    FIRMS:</strong> se la inserisci nelle impostazioni delle allerte, viaggia
+    nell'indirizzo della richiesta fino al nostro server, che la usa per chiedere
+    i dati alla NASA per tuo conto; non viene conservata nella cache né in alcun
+    registro.</li>
     <li><strong>Chi lo serve:</strong> lo stesso server dell'API di MoR Ops,
     ospitato da Hetzner Online GmbH a Norimberga (Germania, Unione europea), che
     compare come responsabile del trattamento nella sezione 3. Il server riceve

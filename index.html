@@ -176,6 +176,11 @@
   recorridos y no envía tu ubicación a ningún servidor (tampoco al de cuentas).
   Puedes negar o revocar el permiso en cualquier momento desde los ajustes de
   Android; el resto de la app sigue funcionando.</p>
+  <p><strong>En la web (morops.app):</strong> el permiso de ubicación lo pide y
+  lo gestiona tu navegador (puedes revocarlo desde sus ajustes) y la ubicación
+  vive solo en la memoria de la pestaña. Las imágenes del mapa que se piden a
+  nuestro servidor indican qué zona estás mirando, pero no tu ubicación exacta,
+  y el servidor no registra quién las pide (sección 17).</p>
 
   <h2>6. Mapas (OpenStreetMap)</h2>
   <p>Para mostrar el mapa, la app descarga imágenes (teselas) desde los
@@ -241,6 +246,8 @@
   puede leer. Las copias de seguridad automáticas de Android están
   desactivadas para esta app, de modo que tus datos no se suben a la nube sin
   que lo decidas.</p>
+  <p><strong>En la web</strong>, la copia se descarga como archivo y siempre va
+  cifrada con una contraseña que eliges.</p>
 
   <h2>10. Seguridad</h2>
   <ul>
@@ -256,6 +263,11 @@
     <li>La app se bloquea sola tras unos minutos en segundo plano y bloquea
     temporalmente el acceso después de varios intentos fallidos. El servidor
     también limita los intentos.</li>
+    <li><strong>En la web</strong>, la sesión se bloquea a los 15 minutos sin
+    uso, o a los 5 minutos con la pestaña oculta. El bloqueo pide tu contraseña
+    de nuevo, pero los datos siguen en la memoria de la pestaña hasta que la
+    cierras o usas «Borrar todos los datos»: en un equipo compartido, cierra
+    sesión al terminar.</li>
   </ul>
 
   <h2>11. Permisos de Android</h2>
@@ -282,7 +294,9 @@
     borra y qué se conserva están en la página
     <a href="delete-account/#es">Borrar tu cuenta de MoR Ops</a>.</li>
     <li><strong>Los datos del teléfono:</strong> en <em>Más → Ajustes → Borrar
-    todos los datos</em>, o desinstalando la app.</li>
+    todos los datos</em>, o desinstalando la app. <strong>En la web:</strong>
+    con <em>Borrar todos los datos</em> o <em>Cerrar sesión</em> (borran todo y
+    recargan la página), o simplemente cerrando la pestaña.</li>
     <li><strong>Copias que exportaste:</strong> quedan donde las guardaste y
     debes borrarlas tú.</li>
   </ul>
@@ -328,30 +342,47 @@
   <p>El sitio <strong>morops.app</strong> es la app MoR Ops en el navegador: la
   misma app, con la misma cuenta. No usa cookies, analíticas ni publicidad, y
   no carga fuentes, scripts, mapas ni vídeos de terceros: todo lo pide a su
-  propio servidor.</p>
+  propio servidor. Hay dos direcciones con la misma app, la misma cuenta y el
+  mismo servidor: <strong>morops.app</strong> y <strong>beta.morops.app</strong>
+  (donde probamos las versiones antes de publicarlas, sin indexar en buscadores).
+  Todo lo que dice esta sección vale para las dos.</p>
   <ul>
-    <li><strong>Qué guarda el navegador:</strong> solo tu idioma, el tema
-    (claro u oscuro) y si ya viste el recorrido inicial, en el almacenamiento
+    <li><strong>Qué guarda el navegador:</strong> solo tu idioma, el tema (oscuro
+    o modo luz roja) y si ya viste el recorrido inicial, en el almacenamiento
     local del navegador (<code>localStorage</code>, claves que empiezan por
     <code>web:</code>). No son datos personales y no se envían al servidor. Se
-    borran desde los ajustes de tu navegador.</li>
+    borran desde los ajustes de tu navegador. La web además le pide al
+    navegador que <strong>no guarde en su caché</strong> las alertas ni las
+    imágenes del mapa, que <strong>no ofrezca guardar tu contraseña ni tu
+    correo</strong> al cerrar las pantallas de cuenta, y no pone datos personales
+    (tu correo, nombres, zonas) en la dirección de las páginas ni en el
+    historial de navegación.</li>
     <li><strong>Tus datos en la web:</strong> lo que cargas (grupo, salud,
     mochila, suministros, puntos del mapa…) vive en la memoria de la pestaña y
     <strong>se borra al cerrarla o recargarla</strong>; no se guarda en el
     dispositivo ni en ningún servidor. Si quieres conservarlo, puedes exportar
-    un respaldo cifrado con contraseña y restaurarlo más tarde (también en la
-    app del teléfono).</li>
+    un respaldo cifrado con contraseña, que se descarga como archivo, y
+    restaurarlo más tarde (también en la app del teléfono). El bloqueo por
+    inactividad (sección 10) no borra los datos de la pestaña.</li>
     <li><strong>Tu cuenta:</strong> entras con la misma cuenta que en la app, y
     funciona igual: el sitio entra, comprueba tu cuenta y cierra la sesión del
     servidor; no queda ninguna sesión ni dato de la cuenta guardado en el
     navegador. Los datos de la cuenta y el registro de accesos son los de las
-    secciones 2 y 3.</li>
+    secciones 2 y 3. Los gestores de contraseñas de tu navegador pueden seguir
+    completando los campos si ya tienes una contraseña guardada por tu cuenta;
+    en un equipo compartido no la guardes.</li>
     <li><strong>Alertas y mapa:</strong> pasan por nuestro servidor, que pide
     esas respuestas públicas en tu nombre (MeteoAlarm, OpenStreetMap y las demás
-    fuentes de las secciones 6 y 7) y guarda copias temporales: 5 minutos las
-    alertas y 14 días las teselas del mapa. Esas copias no tienen nada que ver
+    fuentes de las secciones 6 y 7) y guarda copias temporales: hasta 5 minutos
+    las alertas (si la fuente falla, no te entrega una copia vieja: verás el
+    error) y 14 días las teselas del mapa, salvo las de mucho acercamiento (una
+    calle o una casa), que no se guardan. Esas copias no tienen nada que ver
     contigo: el servidor no sabe quién las pidió y no registra las visitas. Por
-    eso las fuentes solo ven a nuestro servidor, nunca tu dirección IP.</li>
+    eso las fuentes solo ven a nuestro servidor, nunca tu dirección IP.
+    <strong>Clave personal de FIRMS:</strong> si la cargas en los ajustes de
+    alertas, viaja en la dirección del pedido hasta nuestro servidor, que la usa
+    para pedir los datos a la NASA en tu nombre; no se guarda en la caché ni en
+    ningún registro.</li>
     <li><strong>Quién lo sirve:</strong> el mismo servidor de la API de MoR Ops,
     alojado por Hetzner Online GmbH en Núremberg (Alemania, Unión Europea), que
     figura como encargado en la sección 3. El servidor recibe tu dirección IP y
