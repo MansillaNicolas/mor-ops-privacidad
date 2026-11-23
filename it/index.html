@@ -59,7 +59,7 @@
 <body>
 <main>
   <h1>Informativa sulla privacy di MoR Ops</h1>
-  <p class="muted">Ultimo aggiornamento: 23 novembre 2026 (versione 1.8 dell'informativa: sito web morops.app)</p>
+  <p class="muted">Ultimo aggiornamento: 23 novembre 2026 (versione 1.9 dell'informativa: morops.app, l'app nel browser)</p>
   <p class="lang"><a href="../" hreflang="es">Español</a> · <strong>Italiano</strong> · <a href="../en/" hreflang="en">English</a></p>
 
   <p>MoR Ops è un'app per la preparazione e la gestione delle emergenze per
@@ -85,8 +85,9 @@
       OpenStreetMap e le allerte. Non invia mai la tua posizione
       esatta.</li>
       <li>Puoi eliminare il tuo account dall'app quando vuoi.</li>
-      <li>Il sito web morops.app non usa cookie, strumenti di analisi né
-      servizi di terzi, e non salva nulla nel tuo browser se non lo chiedi tu
+      <li>Il sito web morops.app è la stessa app nel browser: non usa cookie,
+      strumenti di analisi né servizi di terzi e non salva i tuoi dati; quelli
+      che inserisci vivono solo nella scheda e si cancellano alla chiusura
       (sezione 17).</li>
     </ul>
   </div>
@@ -132,7 +133,7 @@
   <h2>3. Chi altro tratta i dati del tuo account</h2>
   <table>
     <tr><th>Società</th><th>Che cosa fa</th><th>Dati</th></tr>
-    <tr><td>Hetzner Online GmbH (Germania)</td><td>Ospita il server degli account in data center in Germania.</td><td>Quelli del tuo account e il registro degli accessi; anche i dati tecnici delle visite al sito web (sezione 17).</td></tr>
+    <tr><td>Hetzner Online GmbH (Germania)</td><td>Ospita il server degli account in data center in Germania.</td><td>Quelli del tuo account e il registro degli accessi; anche i dati tecnici delle richieste del sito web (sezione 17).</td></tr>
     <tr><td>Resend, Inc. (Stati Uniti)</td><td>Invia le email dell'account dalla sua regione nell'Unione europea (Irlanda).</td><td>La tua email, la lingua e il contenuto del messaggio (per esempio il codice).</td></tr>
   </table>
   <p>Entrambe agiscono per conto del titolare, come responsabili del
@@ -160,6 +161,10 @@
   condividerli (sezioni 8 e 9). L'app non ha accesso alla tua rubrica, alle
   foto o ai file, tranne il singolo file che scegli quando ripristini un
   backup o importi una mappa offline.</p>
+
+  <p><strong>Sul web (morops.app) questi dati non vengono salvati:</strong>
+  vivono solo nella memoria della scheda e si cancellano quando la chiudi o la
+  ricarichi (sezione 17).</p>
 
   <h2>5. Posizione</h2>
   <p>Con il tuo permesso, l'app usa la posizione del dispositivo <strong>solo
@@ -325,32 +330,53 @@
   email di contatto.</p>
 
   <h2>17. Sito web morops.app</h2>
-  <p>Il sito <strong>morops.app</strong> è un sito statico: non ha account né
-  moduli, non usa cookie, strumenti di analisi né pubblicità, e non carica
-  font, script, mappe o video di terzi.</p>
+  <p>Il sito <strong>morops.app</strong> è l'app MoR Ops nel browser: la stessa
+  app, con lo stesso account. Non usa cookie, strumenti di analisi né
+  pubblicità, e non carica font, script, mappe o video di terzi: chiede tutto
+  al proprio server.</p>
   <ul>
+    <li><strong>Cosa salva il browser:</strong> solo la tua lingua, il tema
+    (chiaro o scuro) e se hai già visto il percorso iniziale, nella memoria
+    locale del browser (<code>localStorage</code>, chiavi che iniziano con
+    <code>web:</code>). Non sono dati personali e non vengono inviati al
+    server. Si cancellano dalle impostazioni del browser.</li>
+    <li><strong>I tuoi dati sul web:</strong> ciò che inserisci (gruppo,
+    salute, zaino, scorte, punti sulla mappa…) vive nella memoria della scheda
+    e <strong>si cancella quando la chiudi o la ricarichi</strong>; non viene
+    salvato sul dispositivo né su alcun server. Se vuoi conservarlo, puoi
+    esportare un backup cifrato con password e ripristinarlo più tardi (anche
+    nell'app del telefono).</li>
+    <li><strong>Il tuo account:</strong> accedi con lo stesso account dell'app e
+    funziona allo stesso modo: il sito accede, verifica il tuo account e chiude
+    la sessione sul server; nel browser non resta nessuna sessione né dato
+    dell'account. I dati dell'account e il registro degli accessi sono quelli
+    delle sezioni 2 e 3.</li>
+    <li><strong>Allerte e mappa:</strong> passano dal nostro server, che chiede
+    queste risposte pubbliche per tuo conto (MeteoAlarm, OpenStreetMap e le
+    altre fonti delle sezioni 6 e 7) e ne conserva copie temporanee: 5 minuti
+    per le allerte e 14 giorni per le tessere della mappa. Quelle copie non
+    hanno nulla a che vedere con te: il server non sa chi le ha richieste e non
+    registra le visite. Per questo le fonti vedono solo il nostro server, mai il
+    tuo indirizzo IP.</li>
     <li><strong>Chi lo serve:</strong> lo stesso server dell'API di MoR Ops,
     ospitato da Hetzner Online GmbH a Norimberga (Germania, Unione europea), che
     compare come responsabile del trattamento nella sezione 3. Il server riceve
-    il tuo indirizzo IP e i dati tecnici della richiesta solo per risponderti e
-    non tiene un registro di ogni visita. In caso di errore tecnico, il registro
-    degli errori del server può contenere l'indirizzo IP; viene cancellato dopo
-    30 giorni. Base giuridica: il legittimo interesse alla sicurezza del
-    servizio (art. 6, par. 1, lett. f) del GDPR).</li>
-    <li><strong>DNS:</strong> il DNS del dominio è su Cloudflare, senza proxy:
-    Cloudflare non riceve le visite al sito.</li>
-    <li><strong>Nel tuo browser, solo se lo chiedi:</strong> la copia per usare
-    il sito senza connessione (quando tocchi "Salva per usare senza
-    connessione") e la lista dello zaino (quando ci spunti qualcosa o cambi il numero di persone). Restano
-    sul tuo dispositivo, non vengono inviate al server e si cancellano con il
-    pulsante "Cancella ciò che è salvato in questo browser" o dalle
-    impostazioni del browser. Una normale visita non salva nulla.</li>
+    il tuo indirizzo IP e i dati tecnici della richiesta solo per risponderti.
+    In caso di errore tecnico, il registro degli errori del server può
+    contenere l'indirizzo IP; viene cancellato dopo 30 giorni. Base giuridica:
+    il legittimo interesse alla sicurezza del servizio (art. 6, par. 1, lett.
+    f) del GDPR).</li>
+    <li><strong>Niente cookie né terzi:</strong> non ci sono cookie, strumenti
+    di analisi, pubblicità né servizi di terzi. <strong>DNS:</strong> il DNS
+    del dominio è su Cloudflare, senza proxy: Cloudflare non riceve le visite
+    al sito.</li>
     <li><strong>Link a terzi:</strong> le guide e l'elenco delle fonti
     rimandano a siti di enti ufficiali e di organizzazioni (per esempio
     autorità di protezione civile, Croce Rossa o agenzie sanitarie), a questa
     informativa (GitHub Pages) e, quando sarà disponibile, a Google Play. Sono
-    tutti siti di terzi, con la loro informativa sulla privacy. Il sito invia l'intestazione Referrer-Policy: no-referrer,
-    quindi non comunica loro da quale pagina arrivi.</li>
+    tutti siti di terzi, con la loro informativa sulla privacy. Il sito invia
+    l'intestazione Referrer-Policy: no-referrer, quindi non comunica loro da
+    quale pagina arrivi.</li>
     <li><strong>Modifiche:</strong> se qualcosa di tutto ciò cambia,
     quest'informativa viene aggiornata prima.</li>
   </ul>

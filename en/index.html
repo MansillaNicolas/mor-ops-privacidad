@@ -59,7 +59,7 @@
 <body>
 <main>
   <h1>MoR Ops privacy policy</h1>
-  <p class="muted">Last updated: 23 November 2026 (policy version 1.8: morops.app website)</p>
+  <p class="muted">Last updated: 23 November 2026 (policy version 1.9: morops.app, the app in the browser)</p>
   <p class="lang"><a href="../" hreflang="es">Español</a> · <a href="../it/" hreflang="it">Italiano</a> · <strong>English</strong></p>
 
   <p>MoR Ops is an emergency preparedness and management app for Android
@@ -82,8 +82,9 @@
       <li>The app only connects to the internet for your account, OpenStreetMap
       maps and alerts. It never sends your exact location.</li>
       <li>You can delete your account from the app at any time.</li>
-      <li>The morops.app website uses no cookies, analytics or third-party
-      services, and stores nothing in your browser unless you ask it to
+      <li>The morops.app website is the same app in the browser: it uses no
+      cookies, analytics or third-party services and does not store your data;
+      what you enter lives only in the tab and is erased when you close it
       (section 17).</li>
     </ul>
   </div>
@@ -127,7 +128,7 @@
   <h2>3. Who else processes your account data</h2>
   <table>
     <tr><th>Company</th><th>What it does</th><th>Data</th></tr>
-    <tr><td>Hetzner Online GmbH (Germany)</td><td>Hosts the account server in data centres in Germany.</td><td>Your account data and the access log; also the technical data of visits to the website (section 17).</td></tr>
+    <tr><td>Hetzner Online GmbH (Germany)</td><td>Hosts the account server in data centres in Germany.</td><td>Your account data and the access log; also the technical data of requests to the website (section 17).</td></tr>
     <tr><td>Resend, Inc. (United States)</td><td>Sends the account emails from its European Union region (Ireland).</td><td>Your email address, the language and the content of the message (for example, the code).</td></tr>
   </table>
   <p>Both act on behalf of the controller as processors, under contracts in
@@ -155,6 +156,10 @@
   (sections 8 and 9). The app has no access to your contacts, photos or files,
   except the single file you choose when restoring a backup or importing an
   offline map.</p>
+
+  <p><strong>On the web (morops.app) this data is not stored:</strong> it lives
+  only in the tab's memory and is erased when you close or reload it
+  (section 17).</p>
 
   <h2>5. Location</h2>
   <p>With your permission, the app uses the device location <strong>only
@@ -318,32 +323,51 @@
   that.</p>
 
   <h2>17. The morops.app website</h2>
-  <p>The <strong>morops.app</strong> website is static: it has no accounts or
-  forms, uses no cookies, analytics or advertising, and loads no third-party
-  fonts, scripts, maps or videos.</p>
+  <p>The <strong>morops.app</strong> website is the MoR Ops app in the browser:
+  the same app, with the same account. It uses no cookies, analytics or
+  advertising, and loads no third-party fonts, scripts, maps or videos:
+  everything is requested from its own server.</p>
   <ul>
+    <li><strong>What the browser stores:</strong> only your language, the theme
+    (light or dark) and whether you have already seen the intro tour, in the
+    browser's local storage (<code>localStorage</code>, keys starting with
+    <code>web:</code>). This is not personal data and is not sent to the
+    server. You can delete it from your browser settings.</li>
+    <li><strong>Your data on the web:</strong> what you enter (group, health,
+    grab bag, supplies, map points…) lives in the tab's memory and <strong>is
+    erased when you close or reload it</strong>; it is not saved on the device
+    or on any server. If you want to keep it, you can export a backup encrypted
+    with a password and restore it later (also in the phone app).</li>
+    <li><strong>Your account:</strong> you sign in with the same account as in
+    the app, and it works the same way: the site signs in, checks your account
+    and closes the session on the server; no session or account data is left
+    stored in the browser. Account data and the access log are those of
+    sections 2 and 3.</li>
+    <li><strong>Alerts and map:</strong> they go through our server, which
+    requests those public responses on your behalf (MeteoAlarm, OpenStreetMap
+    and the other sources in sections 6 and 7) and keeps temporary copies: 5
+    minutes for alerts and 14 days for map tiles. Those copies have nothing to
+    do with you: the server does not know who requested them and does not log
+    visits. That is why the sources only see our server, never your IP
+    address.</li>
     <li><strong>Who serves it:</strong> the same server as the MoR Ops API,
     hosted by Hetzner Online GmbH in Nuremberg (Germany, European Union), which
     is listed as a processor in section 3. The server receives your IP address
-    and the technical details of the request only to answer it, and keeps no
-    log of each visit. If there is a technical error, the server's error log
-    may contain the IP address; it is deleted after 30 days. Legal basis: the
-    legitimate interest in the security of the service (Art. 6(1)(f)
-    GDPR).</li>
-    <li><strong>DNS:</strong> the domain's DNS is at Cloudflare, without proxy:
-    Cloudflare does not receive visits to the site.</li>
-    <li><strong>In your browser, only if you ask for it:</strong> the copy for
-    using the site offline (when you tap "Save for offline use") and the
-    backpack list (when you tick something on it or change the number of people). They stay on your device,
-    are not sent to the server, and are deleted with the "Delete what is saved
-    in this browser" button or from your browser settings. A normal visit
-    saves nothing.</li>
+    and the technical details of the request only to answer it. If there is a
+    technical error, the server's error log may contain the IP address; it is
+    deleted after 30 days. Legal basis: the legitimate interest in the
+    security of the service (Art. 6(1)(f) GDPR).</li>
+    <li><strong>No cookies, no third parties:</strong> there are no cookies,
+    analytics, advertising or third-party services. <strong>DNS:</strong> the
+    domain's DNS is at Cloudflare, without proxy: Cloudflare does not receive
+    visits to the site.</li>
     <li><strong>Third-party links:</strong> the guides and the list of sources
     link to the sites of official bodies and organisations (for example civil
     protection authorities, the Red Cross or health agencies), to this policy
     (GitHub Pages) and, once it is available, to Google Play. These are all
-    third-party sites, with their own privacy policy. The site sends the Referrer-Policy: no-referrer header, so
-    it does not tell them which page you came from.</li>
+    third-party sites, with their own privacy policy. The site sends the
+    Referrer-Policy: no-referrer header, so it does not tell them which page
+    you came from.</li>
     <li><strong>Changes:</strong> if any of this changes, this policy is
     updated first.</li>
   </ul>
